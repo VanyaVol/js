@@ -82,14 +82,14 @@
 // let heightC = 10;
 // let dC = 4;
 // const PI = 3.14;
-// let v = PI * dC**2 * heightC;
+// let v = PI * (dC**2) * heightC;
 //
 // console.log('Об`єм циліндра: ' + Math.floor(v));
 
 // 7. У прямокутного трикутника дві сторони n (зі значенням 3) та m (зі значенням 4).
 // Знайдіть гіпотенузу k за теоремою Піфагора (потрібно використовувати функцію Math.pow (число, ступінь) або оператор зведення в ступінь **).
 
-// let n = 3;
-// let m = 4;
-// let k = Math.pow(n,2) + Math.pow(m,2);
-// console.log(`Гіпотенуза: ${k}`);
+let n = 3;
+let m = 4;
+let k = Math.sqrt(Math.pow(n,2) + Math.pow(m,2));
+console.log(`Гіпотенуза: ${k}`);
