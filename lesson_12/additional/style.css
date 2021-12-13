@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.wrap {
+    padding-top: 30px;
+    margin: 0 auto;
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.email-user {
+    margin-top: 15px;
+}
+
+.email-user, .address-user, .phone-user, .website-user, .company-user {
+    display: block;
+}
+
+.address-user, .phone-user, .website-user, .company-user {
+    margin-top: 10px;
+}
+
+
+.content-block {
+    display: flex;
+    column-gap: 20px;
+}
+
+
+.user-block {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: #eeebeb;
+    padding: 10px;
+    border: 1px solid black;
+
+}
+
+.name-user {
+    text-transform: uppercase;
+}
+
+.username-user {
+    margin-top: 3px;
+    color: #302dee;
+}
+
+
+.post-block {
+    display: none;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.post {
+    display: flex;
+    column-gap: 20px;
+}
+
+.post-body {
+    display: block;
+    width: 400px;
+    padding: 10px;
+    background-color: #eeebeb;
+    border: 1px solid black;
+}
+
+.comment-block {
+    display: none;
+    width: 400px;
+    row-gap: 20px;
+    flex-direction: column;
+}
+
+.comment {
+    padding: 10px;
+    background-color: #eeebeb;
+    border: 1px solid black;
+}
+
+.user-bottom-block {
+    margin-top: 30px;
+}
+
+.button-user, .button-post {
+    height: 30px;
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.button-post {
+    margin-top: 20px;
+}
+
+.email-comment {
+    margin-top: 10px;
+}
+
+.text-comment {
+    margin-top: 10px;
+}
+
+.text-post {
+    margin-top: 10px;
+}

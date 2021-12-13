@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 20px;
+            row-gap: 20px;
+            width: 1000px;
+            margin: 0 auto;
+
+        }
+
+        .block-comment {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        .header-comment {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 80px;
+            background-color: #bbbbbb;
+        }
+
+        .body-comment {
+            display: flex;
+            height: 200px;
+            background-color: #e0e0e0;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        h4 {
+            margin: 1px 1px 1px 5px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 25px;
+            width: 90px;
+            background-color: #eaeaea;
+            margin-left: 5px;
+            cursor: pointer;
+            border: 1px solid #000000;
+            border-radius: 2px;
+        }
+
+        p {
+            margin-left: 5px;
+        }
+
+
+        .active > ul {
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+<p id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur, cumque eaque est eum,
+    eveniet excepturi explicabo ipsam nam officiis optio quisquam reprehenderit ut? Et hic laborum libero vitae
+    voluptatem!</p>
+<button name="btn">Hide</button>
+<hr>
+<label>
+    <span>Вам є 18 років ?</span>
+    <input type="text" name="text">
+    <input type="button" name="confirm" value="OK">
+</label>
+
+<hr>
+
+<div class="menu">
+    <h4 class="title">Click Me!!!</h4>
+    <ul class="menu-text">
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit.</li>
+    </ul>
+</div>
+
+<hr>
+
+
+
+
+<script src="main.js">
+
+</script>
+</body>
+</html>
