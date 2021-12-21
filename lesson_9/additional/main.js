@@ -16,7 +16,7 @@
 //                     lng: '81.1496'
 //                 }
 //             },
-//             phone: '1-770-736-8031 x56442',
+//             phone: '1-770-736-8031',
 //             website: 'hildegard.org',
 //             company: {
 //                 name: 'Romaguera-Crona',
@@ -39,7 +39,7 @@
 //                     lng: '-34.4618'
 //                 }
 //             },
-//             phone: '010-692-6593 x09125',
+//             phone: '010-692-6593',
 //             website: 'anastasia.net',
 //             company: {
 //                 name: 'Deckow-Crist',
@@ -85,7 +85,7 @@
 //                     lng: '-164.2990'
 //                 }
 //             },
-//             phone: '493-170-9623 x156',
+//             phone: '493-170-9623',
 //             website: 'kale.biz',
 //             company: {
 //                 name: 'Robel-Corkery',
@@ -477,33 +477,100 @@ for (const user of usersList) {
     userBlock.classList.add('user-block');
     wrap.appendChild(userBlock);
 
+    const UserBlockHeader = document.createElement('div');
+    UserBlockHeader.classList.add('user-block-header');
+    userBlock.appendChild(UserBlockHeader);
+
     const userInfo = document.createElement('div');
     userInfo.classList.add('user-info');
-    userBlock.appendChild(userInfo);
+    UserBlockHeader.appendChild(userInfo);
 
-    const userId = document.createElement('h2');
-    userId.innerText = user.id;
+    const userHeader = document.createElement('h3');
+    userHeader.innerText='User';
+
+    const userContent = document.createElement('div');
+
+    userInfo.append(userHeader,userContent);
+
+
+    const userId = document.createElement('h4');
+    userId.innerText = `ID: ${user.id}`;
 
     const userName = document.createElement('h3');
     userName.innerText = user.name;
 
     const userUsername = document.createElement('h4');
-    userUsername.innerText = user.username;
+    userUsername.innerText = `username: ${user.username}`;
 
     const userEmail = document.createElement('h5');
-    userEmail.innerText = user.email;
+    userEmail.innerText = `email: ${user.email}`;
 
     const userPhone = document.createElement('h6');
-    userPhone.innerText = user.phone;
+    userPhone.innerText = `Phone: ${user.phone}`;
 
-    const userWebsite = document.createElement('span');
-    userWebsite.innerText = user.website;
+    const userWebsite = document.createElement('p');
+    userWebsite.innerText = `website: ${user.website}`;
 
-
-    userInfo.append(userId, userName, userUsername, userEmail, userPhone, userWebsite);
+    userContent.append(userId, userName, userUsername, userEmail, userPhone, userWebsite);
 
     const userAddressBlock = document.createElement('div');
-    userBlock.appendChild(userAddressBlock);
+    userAddressBlock.classList.add('user-address');
+    UserBlockHeader.appendChild(userAddressBlock);
+
+    const userAddressHeader = document.createElement('h3');
+    userAddressHeader.innerText = 'Address';
+
+    const userAddressContent = document.createElement('div');
+    userAddressContent.classList.add('user-address-content');
+
+    userAddressBlock.append(userAddressHeader,userAddressContent);
+
+    const userAddressCity = document.createElement('h4');
+    userAddressCity.innerText = `City: ${user.address.city}`;
+
+    const userAddressStreet = document.createElement('h4');
+    userAddressStreet.innerText = `Street: ${user.address.street}`;
+
+    const userAddressSuite = document.createElement('h4');
+    userAddressSuite.innerText = `Suite: ${user.address.suite}`;
+
+    const userAddressZipcode = document.createElement('h4');
+    userAddressZipcode.innerText = `Index: ${user.address.zipcode}`;
+
+    const userAddressGeo = document.createElement('div');
+    userAddressGeo.classList.add('user-address-geo');
+
+    const userAdDressGeoTitle = document.createElement('h4');
+    userAdDressGeoTitle.innerText = 'Geo:'
+
+    const userGeoLngLet = document.createElement('p');
+    userGeoLngLet.innerText = `Lng: ${user.address.geo.lng}, lat: ${user.address.geo.lat}`
+
+    userAddressGeo.append(userAdDressGeoTitle,userGeoLngLet);
+
+    userAddressContent.append(userAddressZipcode, userAddressCity, userAddressStreet, userAddressSuite,userAddressGeo);
+
+    const userCompanyBlock = document.createElement('div');
+    userCompanyBlock.classList.add('user-company');
+    userBlock.appendChild(userCompanyBlock);
+
+    const userCompanyHeader = document.createElement('h3');
+    userCompanyHeader.innerText = 'Company';
+
+    const userCompanyContent = document.createElement('div');
+
+    userCompanyBlock.append(userCompanyHeader, userCompanyContent);
+
+    const userCompanyName = document.createElement('p');
+    userCompanyName.innerText = `Name: ${user.company.name}`;
+
+    const userCompanyCatchPhrase = document.createElement('p');
+    userCompanyCatchPhrase.innerText = `${user.company.catchPhrase}`;
+
+    const userCompanyBs = document.createElement('p');
+    userCompanyBs.innerText = `${user.company.bs}`;
+
+    userCompanyContent.append(userCompanyName, userCompanyCatchPhrase, userCompanyBs);
 
 
 }

@@ -3,12 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Lesson 9</title>
+
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
         .wrap {
             margin: 0 auto;
-            max-width: 1200px;
+            max-width: 1330px;
             display: flex;
             flex-wrap: wrap;
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+
+        .user-block {
+            display: flex;
+            flex-basis: 435px;
+            flex-direction: column;
+            background-color: #d9d9d9;
+        }
+
+        .user-block-header{
+            display: flex;
+        }
+
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .user-address {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .user-company {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            margin: 5px;
+            padding: 5px;
+            background-color: #b0b0b0;
+        }
+
+
+        .user-info, .user-address {
+            width: 132px;
+            margin: 5px;
+            padding: 5px;
+            background-color: #b0b0b0;
         }
 
 
