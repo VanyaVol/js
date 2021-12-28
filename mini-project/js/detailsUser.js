@@ -1,8 +1,12 @@
+
+
 const url = new URL(window.location.href);
 
 const urlUser = url.searchParams.get('user');
 
 const user = JSON.parse(urlUser);
+
+document.title = `Posts ${user.name}`;
 
 const wrapDetailsDiv = document.createElement('div');
 wrapDetailsDiv.classList.add('wrapper');
@@ -159,7 +163,6 @@ buttonUserDetails.addEventListener('mouseleave', () => {
 });
 
 
-// window.location.href = `user-details.html?user=${JSON.stringify(user)}`;
 fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
     .then(response => response.json())
     .then(posts => {
@@ -209,9 +212,8 @@ fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
             });
 
             buttonPost.addEventListener('click', () => {
-                console.log('yes',post.title);
+                window.location.href=`post-details.html?post=${JSON.stringify(post)}`;
             });
-
         }
 
         let click = false;
@@ -228,8 +230,6 @@ fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
                 buttonUserDetails.innerText = 'Показати пости поточного користувача';
 
             }
-
-
         });
 
     });

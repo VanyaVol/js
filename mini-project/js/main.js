@@ -1,3 +1,5 @@
+document.title = 'Users';
+
 const wrapDiv = document.createElement('div');
 wrapDiv.classList.add('wrapper');
 wrapDiv.style.display = 'flex';
@@ -19,7 +21,6 @@ fetch('https://jsonplaceholder.typicode.com/users')
             userBlock.style.padding = '13px';
             userBlock.style.fontFamily = 'sans-serif';
             userBlock.style.boxShadow = '0 2px 5px';
-            userBlock.style.borderRadius = '3px';
             userBlock.style.backgroundColor = '#d3d3d3';
 
             wrapDiv.appendChild(userBlock);
